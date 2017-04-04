@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOL</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .page-title {
+            text-align: center;
+        }
+
+        .gol-grid {
+            background: whitesmoke;
+            margin: auto;
+        }
+
+        .gol-grid .cell {
+            width: 4px;
+            height: 4px;
+            float: left;
+        }
+
+        .dead {
+            background: #444;
+        }
+
+        .alive {
+            background: white;
+        }
+
+        .controls {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1 class="page-title">JavaScript version of the <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Game of
+    Life</a></h1>
+
+<article>
+
+    <div id="gol" class="gol-grid"></div>
+
+    <hr>
+
+    <div class="controls">
+        <button role="button" id="random">Randomize</button>
+        <button role="button" id="runLife">Run Single Life Cycle</button>
+        <button role="button" id="runCont">Run Continuously</button>
+        <button role="button" id="stop">Stop</button>
+    </div>
+
+</article>
+
+<script src="js/gol.js"></script>
+
+</body>
+</html>
