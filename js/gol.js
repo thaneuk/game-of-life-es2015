@@ -72,7 +72,7 @@
             this.y = y;
             this.grid = [];
             this.gridElement = gridElement;
-            this.contuously = false;
+            this.continuously = false;
 
             this.generateGrid().renderGrid();
         }
@@ -132,19 +132,19 @@
             this.runThroughGrid(cell => cell.calculateNextState());
             this.runThroughGrid(cell => cell.moveToNextState());
 
-            if (this.contuously) {
+            if (this.continuously) {
                 window.setTimeout(() => this.runLifeCycle(), 25);
             }
         }
 
-        runContuously() {
-            this.contuously = true;
+        runContinuously() {
+            this.continuously = true;
 
             this.runLifeCycle();
         }
 
         stop() {
-            this.contuously = false;
+            this.continuously = false;
         }
     }
 
@@ -164,7 +164,7 @@
 
     document.getElementById('random').addEventListener('click', () => grid.randomize(), false);
     document.getElementById('runLife').addEventListener('click', () => grid.runLifeCycle(), false);
-    document.getElementById('runCont').addEventListener('click', () => grid.runContuously(), false);
+    document.getElementById('runCont').addEventListener('click', () => grid.runContinuously(), false);
     document.getElementById('stop').addEventListener('click', () => grid.stop(), false);
 
 })(window, window.Grid);
